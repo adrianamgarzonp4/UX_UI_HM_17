@@ -11,6 +11,10 @@ ScopeOne Font scale
 0.397em (7.14px)	A Visual Type Scale
 */
 
+* {
+    box-sizing: border-box;
+  }
+
 :root {
     --black: #000000;
     --dark-grey: #404040;
@@ -66,6 +70,7 @@ nav li a, footer li a {
     font-weight: bolder;
     text-decoration: none;
     color: var(--blue, #3a4fab);
+    font-size: 1.2em;
 }
 
 nav ul, footer ul {
@@ -74,11 +79,14 @@ nav ul, footer ul {
     padding: 0;
 }
 
+footer {
+    background-color: var(--white, #ffffff);
+}
+
 .copyright {
     font-size: 0.735rem;
     color: var(--blue, #3a4fab);
 }
-
 
 .highlight {
     font-family: 'Scope One', serif;
@@ -98,5 +106,22 @@ nav ul, footer ul {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    background-color: var(--yellow, #f1e72f);
+}
+
+.icon-circle {
+    background-color: var(--yellow, #f1e72f);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.nav-menu-highlight {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+nav ul li div.nav-menu-highlight:hover {
     background-color: var(--yellow, #f1e72f);
 }
