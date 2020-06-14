@@ -1,0 +1,102 @@
+/*
+ScopeOne Font scale
+4.666em (84.00px)	A Visual Type Scale
+3.429em (61.73px)	A Visual Type Scale
+2.52em (45.36px)	A Visual Type Scale
+1.852em (33.33px)	A Visual Type Scale
+1.361em (24.49px)	A Visual Type Scale
+1em (18.00px)	A Visual Type Scale
+0.735em (13.23px)	A Visual Type Scale
+0.54em (9.72px)	A Visual Type Scale
+0.397em (7.14px)	A Visual Type Scale
+*/
+
+:root {
+    --black: #000000;
+    --dark-grey: #404040;
+    --white: #ffffff;
+    --blue: #3a4fab;
+    --light-grey: #efefef;
+    --yellow: #f1e72f;
+    font-size: 18px;
+  }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: var(--blue, #3a4fab);
+}
+
+h1 {
+    font-family: 'Scope One', serif;
+    color: var(--yellow, #f1e72f);
+    font-size: 4.666rem;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Scope One', serif;
+    color: var(--blue,#3a4fab);
+    font-size: 1.361rem;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+div .circle {
+    background-color: var(--yellow, #f1e72f);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: var(--white, #ffffff);
+    padding: 5px;
+}
+
+nav li a, footer li a {
+    font-family: 'Scope One', serif;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--blue, #3a4fab);
+}
+
+nav ul, footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.copyright {
+    font-size: 0.735rem;
+    color: var(--blue, #3a4fab);
+}
+
+
+.highlight {
+    font-family: 'Scope One', serif;
+    font-weight: bold;
+    color: var(--blue, #3a4fab);
+    font-size: 1.2em;
+}
+
+.small-circle-blue {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--blue, #3a4fab);
+}
+
+.small-circle-yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--yellow, #f1e72f);
+}
