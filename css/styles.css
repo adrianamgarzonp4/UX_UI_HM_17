@@ -13,7 +13,7 @@ ScopeOne Font scale
 
 * {
     box-sizing: border-box;
-  }
+}
 
 :root {
     --black: #000000;
@@ -23,12 +23,13 @@ ScopeOne Font scale
     --light-grey: #efefef;
     --yellow: #f1e72f;
     font-size: 18px;
-  }
+}
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
 }
 
 /*GENERAL FONT ADJUSTMENTS*/
@@ -74,6 +75,21 @@ nav {
     padding: 10px;
 }
 
+.logo {
+    width: 60px;
+}
+
+.nav-options {
+    display: inline;
+    position: relative;
+}
+
+.nav-logo {
+    display: inline;
+    position: relative;
+    left: 50%;
+}
+
 .nav-item { /*nav ul li item, not including logo*/
     width: 100px;
     height: 60px;
@@ -86,21 +102,24 @@ nav {
     width: 54px;
     height: 54px;
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
 nav ul li div.link-hover:hover {
     background-color: var(--yellow, #f1e72f);
+    color: var(--dark-grey, #404040);
 }
 
 nav .current .link-hover {
     background-color: var(--yellow, #f1e72f);
+    color: var(--dark-grey, #404040);
 }
 
 nav ul li.logo {
-    float: left;
+    position: relative;
+    margin: auto;
 }
 
 nav ul li.nav-item {
@@ -158,9 +177,22 @@ footer {
 .divider {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
-/*BUTTON*/
+/*MAIN: profile photo, button*/
+.photo-container {
+    margin-bottom: 24px;
+}
+
+.profile-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
 .inner-button-div {
     width: 100%;
     height: 60px;
@@ -180,6 +212,7 @@ footer {
 
 .my-button-link .link-hover:hover {
     background-color: var(--yellow, #f1e72f);
+    color: var(--dark-grey, #404040);
 }
 
 
@@ -189,10 +222,10 @@ footer {
 .header-grid {
     display: grid;
     grid-template-areas: 
-        'nav nav nav nav nav nav nav nav nav'
-        '. . . . . . . . r-decor'
-        'l-decor . heading heading . . . . r-decor'
-        'l-decor . . . . . . . r-decor';
+        'nav nav nav nav nav nav nav nav'
+        '. . . . . . . r-decor'
+        'l-decor heading heading . . . . r-decor'
+        'l-decor . . . . . . r-decor';
 }
 
 .hg-1 { 
@@ -210,9 +243,6 @@ footer {
     grid-area: r-decor;
     justify-self: end; 
 }
-
-/*Header-nav*/
-
 
 /*Header - left-decor*/
 .left-decor {
@@ -255,25 +285,36 @@ footer {
 .rdc11 { grid-area: c11}
 .rdc12 { grid-area: c12}
 
-
-
+/* /////WORKING IN THIS SECTION////// */
 
 /*Main - Skills*/
 .main-skills { 
-    background-color: #f1e72f;
+    background-color: var(--light-grey, #efefef);
     display: grid;
     grid-template-areas: 
-        'heading heading'
-        'bullets1 bullets2';
+        'heading heading . .'
+        'bullets1 bullets1 bullets2 bullets2';
+    align-items: start;
+    height: 100%;
 }
 
-.ms-1 { grid-area: heading; }
-.ms-2 { grid-area: bullets1; }
-.ms-3 { grid-area: bullets2; }
+.ms-1 { 
+    grid-area: heading;
+    padding-top: 48px; 
+    padding-left: 48px;
+}
+.ms-2 { 
+    grid-area: bullets1; 
+    justify-self: center;
+}
+.ms-3 { 
+    grid-area: bullets2;
+    justify-self: center; 
+}
 
 /*Main - Tools*/
 .main-tools { 
-    background-color: #f1e72f;
+    background-color: var(--light-grey);
     display: grid;
     grid-template-areas: 
         'heading heading heading heading'
@@ -286,35 +327,39 @@ footer {
 .mt-4 { grid-area: prototype; }
 .mt-5 { grid-area: project; }
 
+
 /*Main - main-grid*/
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
     grid-gap: 24px 20px;
     width: 66%;
     margin: auto;
+    padding-top: 24px;
 }
 
-.mg-1 { /*photo*/
+.mg-1 { /*photo and button*/
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-.mg-2 { /*button*/
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 1 / 3;
+    padding-top: 24px;
     align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
-.mg-3 { /*about*/
+
+.mg-2 { /*about*/
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
+    padding-left: 24px;
  }
-.mg-4 { /*skills*/
+.mg-3 { /*skills*/
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+.mg-4 { /*tools*/
     grid-column: 1 / 3;
     grid-row: 4 / 5;
-}
-.mg-5 { /*tools*/
-    grid-column: 1 / 3;
-    grid-row: 5 / 6;
 }
 
