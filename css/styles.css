@@ -327,7 +327,10 @@ main section div ul {
         '. . . . c12';
 }
 
-.rdc1 { grid-area: c1}
+div.rdc1 { 
+    grid-area: c1;
+    background-color: var(--blue, #3a4fab);
+}
 .rdc2 { grid-area: c2}
 .rdc3 { grid-area: c3}
 .rdc4 { grid-area: c4}
