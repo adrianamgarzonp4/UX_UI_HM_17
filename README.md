@@ -1,2 +1,3 @@
 # UX_UI_HM_17
- Bootcamp portfolio coding practice
+
+ Used HTML and CSS to code portfolio about page
